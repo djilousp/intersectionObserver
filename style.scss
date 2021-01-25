@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(3, 85, 129, 0.7),
+      rgba(3, 85, 129, 0.7)
+    ),
+    url(./images/pexels-pixabay-38630.jpg);
+  background-size: cover;
+  transition: 0.5s;
+  border: 1px solid #000000;
+}
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: 0%;
+  left: 0%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  .logo {
+    font-size: 3rem;
+    margin-left: 4px;
+  }
+  ul {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    li {
+      list-style: none;
+      margin-left: 4rem;
+
+      a {
+        display: inline-block;
+        height: 40px;
+        text-align: center;
+        font-size: 1.5rem;
+
+        border-radius: 5px;
+        &:visited {
+          color: red;
+        }
+      }
+    }
+  }
+}
