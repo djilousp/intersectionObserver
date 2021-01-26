@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;900&family=Timmana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;600;900&family=Timmana&display=swap");
 $montserrat: "Montserrat", sans-serif;
 $poppins: "Poppins", sans-serif;
 $timmana: "Timmana", sans-serif;
@@ -9,7 +9,7 @@ $timmana: "Timmana", sans-serif;
   text-decoration: none;
 }
 
-section {
+.main-view {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -27,96 +27,123 @@ section {
   transition: 0.5s;
   border: 1px solid #000000;
   padding: 100px;
-}
-header {
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  top: 0%;
-  left: 0%;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 10rem;
-  .logo {
-    font-family: $timmana;
-    width: 25%;
-    position: relative;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 104px;
-    color: #ffe101;
-    text-shadow: -3px -1px 8px rgba(46, 113, 148, 0.2);
-  }
-  ul {
-    position: relative;
-    width: 40%;
+
+  header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0%;
+    left: 0%;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    li {
-      list-style: none;
-      margin-left: 2rem;
-      a {
-        display: inline-block;
-        text-align: center;
-        font-size: 2rem;
-        border-radius: 5px;
+    padding: 0rem 7rem;
+    z-index: 10;
+    .logo {
+      font-family: $timmana;
+
+      position: relative;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: normal;
+      color: #ffe101;
+      padding-top: 2rem;
+      text-shadow: -3px -1px 8px rgba(46, 113, 148, 0.2);
+    }
+    ul {
+      position: relative;
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        list-style: none;
+        margin-left: 2rem;
+        a {
+          display: inline-block;
+          text-align: center;
+          font-size: 24px;
+          padding: 4px 20px;
+          font-family: $poppins;
+          line-height: 36px;
+          color: white;
+        }
+        .active {
+          background: #ffe101;
+          border-radius: 5px;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 45px;
+          letter-spacing: 0.02em;
+
+          color: #fffbfb;
+
+          text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
       }
     }
   }
-}
-.content {
-  margin-top: 9rem;
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  .work-hard {
-    h1 {
-      font-family: $montserrat;
+  .nav-scrolled {
+    background: white;
+    a {
+      color: #2e7194;
+    }
+    .active {
+      color: #2e7194;
+    }
+  }
+  .content {
+    margin-top: 9rem;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .work-hard {
+      h1 {
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        line-height: 98px;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0px 4px 4px rgba(240, 155, 6, 0.58);
+      }
+      span {
+        font-style: italic;
+        color: #ffe101;
+      }
+    }
+    .clock-ticking {
+      font-family: $timmana;
       font-style: normal;
-      font-weight: bold;
-      font-size: 5rem;
-      line-height: 98px;
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 52px;
       text-align: center;
-      color: #ffffff;
-      text-shadow: 0px 4px 4px rgba(240, 155, 6, 0.58);
-    }
-    span {
-      font-style: italic;
-      color: #ffe101;
-    }
-  }
-  .clock-ticking {
-    font-family: $timmana;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 52px;
-    text-align: center;
-    letter-spacing: 0.2em;
+      letter-spacing: 0.2em;
 
-    color: #fffffe;
-  }
-  button {
-    font-family: $poppins;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 72px;
-    text-align: center;
-    color: #fffbfb;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.72);
-    background: rgba(255, 225, 1, 0.9);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    outline: none;
-    cursor: pointer;
+      color: #fffffe;
+    }
+    button {
+      font-family: $poppins;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 72px;
+      text-align: center;
+      color: #fffbfb;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.72);
+      background: rgba(255, 225, 1, 0.9);
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      outline: none;
+      cursor: pointer;
+    }
   }
 }

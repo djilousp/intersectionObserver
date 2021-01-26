@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;900&family=Timmana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;600;900&family=Timmana&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,7 +7,7 @@
   text-decoration: none;
 }
 
-section {
+.main-view {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -33,10 +33,10 @@ section {
   padding: 100px;
 }
 
-header {
-  position: absolute;
+.main-view header {
+  position: fixed;
   width: 100%;
-  height: 80px;
+  height: 100px;
   top: 0%;
   left: 0%;
   color: white;
@@ -49,22 +49,22 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 4rem 10rem;
+  padding: 0rem 7rem;
+  z-index: 10;
 }
 
-header .logo {
+.main-view header .logo {
   font-family: "Timmana", sans-serif;
-  width: 25%;
   position: relative;
   font-size: 4rem;
   font-style: normal;
   font-weight: normal;
-  line-height: 104px;
   color: #ffe101;
+  padding-top: 2rem;
   text-shadow: -3px -1px 8px rgba(46, 113, 148, 0.2);
 }
 
-header ul {
+.main-view header ul {
   position: relative;
   width: 40%;
   display: -webkit-box;
@@ -78,19 +78,46 @@ header ul {
           align-items: center;
 }
 
-header ul li {
+.main-view header ul li {
   list-style: none;
   margin-left: 2rem;
 }
 
-header ul li a {
+.main-view header ul li a {
   display: inline-block;
   text-align: center;
-  font-size: 2rem;
-  border-radius: 5px;
+  font-size: 24px;
+  padding: 4px 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 36px;
+  color: white;
 }
 
-.content {
+.main-view header ul li .active {
+  background: #ffe101;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+  color: #fffbfb;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-view .nav-scrolled {
+  background: white;
+}
+
+.main-view .nav-scrolled a {
+  color: #2e7194;
+}
+
+.main-view .nav-scrolled .active {
+  color: #2e7194;
+}
+
+.main-view .content {
   margin-top: 9rem;
   position: relative;
   width: 100%;
@@ -109,7 +136,7 @@ header ul li a {
       justify-content: space-around;
 }
 
-.content .work-hard h1 {
+.main-view .content .work-hard h1 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -120,12 +147,12 @@ header ul li a {
   text-shadow: 0px 4px 4px rgba(240, 155, 6, 0.58);
 }
 
-.content .work-hard span {
+.main-view .content .work-hard span {
   font-style: italic;
   color: #ffe101;
 }
 
-.content .clock-ticking {
+.main-view .content .clock-ticking {
   font-family: "Timmana", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -136,7 +163,7 @@ header ul li a {
   color: #fffffe;
 }
 
-.content button {
+.main-view .content button {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 900;
